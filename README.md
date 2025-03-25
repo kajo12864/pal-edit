@@ -2,7 +2,7 @@
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/kajo12864/pal-edit/badge)](https://scorecard.dev/viewer/?uri=github.com/kajo12864/pal-edit)
 <h2>Pal-Edit - Simple Technical Palette Editor</h2>
 <p>I created pal-edit to be able to automatically recolor an entire sheet of sprites given what color I would like to change and the replacement color. I originally created this project in Python, then remade it in Qt as my first practical GUI project.</p>
-<p>Pal-Edit is intended to release as FLOSS.</p>
+<p>Pal-Edit is under the GNU General Public License v3.0</p>
 <h3>Useage</h3>
 <ol>
   <li>Open a valid .png, .jpg, or .bmp file (File -> Open).</li>
