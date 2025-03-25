@@ -1,4 +1,4 @@
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10211/badge)](https://www.bestpractices.dev/projects/10211&cache-control=no-cache)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10211/badge)](https://www.bestpractices.dev/projects/10211)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/kajo12864/pal-edit/badge)](https://scorecard.dev/viewer/?uri=github.com/kajo12864/pal-edit)
 <h2>Pal-Edit - Simple Technical Palette Editor</h2>
 <p>I created pal-edit to be able to automatically recolor an entire sheet of sprites given what color I would like to change and the replacement color. I originally created this project in Python, then remade it in Qt as my first practical GUI project.</p>
