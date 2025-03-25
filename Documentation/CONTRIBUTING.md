@@ -4,6 +4,7 @@
 <p>The program was written in Qt 14.0.1 in the C++ language so please take such into account while writing new code or modifying existing code.</p>
 <p>Please test your additions / modifications before submtting a pull/merge request.</p>
 <p>Please also include a brief write-up of what exactly was added/changed when submitting changes.</p>
+<p>FOR LARGE FEATURES: Please go to the test suite branch first - or create your own branch - instead of merging directly to master.</p>
 <h4>Code standards</h4>
 <p>Each introduced feature (whether as a function or additional files / code) should have comments that explain their functionality and purpose.</p>
 <h3>Bug Reporting</h3>
