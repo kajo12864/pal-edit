@@ -3,7 +3,6 @@
 #include <QFileDialog>
 #include <QImage>
 #include <iostream>
-#include <vector>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,21 +15,28 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//Apply new color over old color
 void MainWindow::on_applyButton_clicked()
 {
+    //RGB values to be replaced
     int r_old = (ui->ReplaceR->toPlainText()).toInt();
     int g_old = (ui->ReplaceG->toPlainText()).toInt();
     int b_old = (ui->ReplaceB->toPlainText()).toInt();
+    //RGB values of replacement color
     int r_new = (ui->NewR->toPlainText()).toInt();
     int g_new = (ui->NewG->toPlainText()).toInt();
     int b_new = (ui->NewB->toPlainText()).toInt();
+    //Debug (prints RGB values to be replaced)
     std::cout << "Should be " << r_old << " " << g_old << " " << b_old << "\n";
     QColor old_color = QColor::fromRgb(r_old,g_old,b_old); //Color to look for
     QColor new_color = QColor::fromRgb(r_new,g_new,b_new); //Color to replace with
+    //Gets the pixmap of the preview image label
     QPixmap Image = ui->label_image->pixmap();
+    //Converts the pixmap to an image to be processed
     QImage ConvertingImage = Image.toImage();
     int width = Image.width();
     int height = Image.height();
+    //Scans each pixel of the image, gets its color, if it matches old_color it is replaced.
     for(int x = 0; x < width; x++){
         for(int y = 0; y < height; y++){
             QColor pixel_color = QColor::fromRgba(ConvertingImage.pixel(x,y));
@@ -45,7 +51,7 @@ void MainWindow::on_applyButton_clicked()
 }
 
 
-
+//User file input
 void MainWindow::on_actionOpen_File_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "file://", tr("Image Files (*.png *.jpg *.bmp)"));
@@ -54,6 +60,7 @@ void MainWindow::on_actionOpen_File_triggered()
     ui->label_image->setPixmap(QPixmap::fromImage(newImage));
 }
 
+//User file output
 void MainWindow::on_actionSave_triggered()
 {
     QPixmap Image = ui->label_image->pixmap();
