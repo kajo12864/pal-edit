@@ -13,3 +13,4 @@
   <li>Steps to replicate the issue</li>
   <li>(If possible) where you believe the issue originates and/or possible fixes</li>
 </ol>
+<p>To <b>privately</b> report a bug, go to the Advisories page (under Security) and press Report a Vulnerability.</p>
